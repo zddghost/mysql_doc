@@ -17,3 +17,9 @@
     table_name = ‘表名’
     and table_schema=‘数据库名’
     【COLUMN_NAME=列名，COLUMN_COMMENT=列注释】
+    
+# 查询 MySQL 某个库的所有表名和表数据总数
+
+    SELECT table_name,table_rows 
+    FROM information_schema.tables  
+    WHERE table_schema='库名称' ORDER BY table_rows DESC; 
